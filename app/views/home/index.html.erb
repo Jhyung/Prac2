@@ -1,7 +1,33 @@
-<%= @my_lotto_num%>
-<%= image_tag(@lotto_num0_src) %>
+
 <%= image_tag(@lotto_num1_src) %>
 <%= image_tag(@lotto_num2_src) %>
 <%= image_tag(@lotto_num3_src) %>
 <%= image_tag(@lotto_num4_src) %>
 <%= image_tag(@lotto_num5_src) %>
+
+
+
+<h1>당첨 번호 : <% @real_lotto_num %></h1>
+<% @real_lotto_num.each do |a| %>
+    <%= image_tag(a) %>
+<%end %>
+
+<h1>보너스 번호 : </h1>
+    <%= image_tag(@bonus_num) %>
+
+<h1>나의 번호 :</h1>
+<% @my_lotto_num.each do |a| %>
+    <%= image_tag(a) %>
+<%end %>
+
+<h1>맞은 번호 : </h1>
+<% @match_lotto_num.each do |a| %>
+    <%= image_tag(a) %>
+<%end %>
+
+<h1>맞은 수 :</h1>
+<% @real_lotto_num.each do |a| %>
+    <%= image_tag(a) %>
+<%end %>
+
+<h1>등수 : <%= @result %></h1>
